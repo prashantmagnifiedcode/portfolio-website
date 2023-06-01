@@ -1,0 +1,140 @@
+.home {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+
+}
+ .__text-wrapper {
+  display: flex;
+  justify-content: center;
+
+}
+ .__text-wrapper  span{
+  /* color: #5baed7; */
+  margin: 0px;
+  font-weight: 700;
+  /* font-size: 3rem; */
+  /* line-height: 5rem; */
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typingEffectAnimation 2.5s steps(20, end);
+  text-align: center;
+}
+.home .__contact-me{
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+
+}
+.home .__contact-me button{
+  cursor: pointer;
+  padding: 8px 50px;
+  font-size: 1.5rem;
+  background: transparent;
+  color:white;
+  border: 1.5px solid #4ab2f3;
+  border-radius: 20px;
+  font-weight: 700;
+
+}
+.home .__contact-me button:hover{
+  background: #ebf9fb;
+  color: #000000;
+}
+
+
+.TopBox {
+  width: 200px;
+  height: 200px;
+  box-shadow: 16px 14px 20px #0000008c;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  display: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+.TopBox::before{
+  content: "";
+  background-image: conic-gradient(
+      rgb(64, 77, 219) 20deg,
+      transparent 120deg
+      );
+  
+  width: 150%;
+  height: 150%;
+  /* border-radius: 50%; */
+  background-color: gold;
+  position: absolute;
+  animation: Toprotate 2s linear infinite;
+}
+.TopBox::after{
+  content: "";
+  width: 190px;
+  height: 190px;
+  background: #101010;
+
+  position: absolute;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ff0052;
+  font-size: larger;
+  letter-spacing: 5px;
+  box-shadow: inset 20px 20px 20px #0000008c;
+}
+.TopBox .TopBox_content{
+  position: absolute;
+  display:  flex;
+  justify-content: center;
+  align-items: center;
+
+   height: 100%;
+   width: 60%;
+   z-index: 5;
+}
+@keyframes Toprotate {
+  0%{
+      transform: rotate(0deg);
+  }
+  100%{
+      transform: rotate(-360deg);
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .home__text-wrapper h1 {
+    font-size: 3rem;
+    line-height: 5rem;
+  }
+}
+
+@media only screen and (min-width: 551px) and (max-width: 768px) {
+  .home__text-wrapper h1 {
+    font-size: 4rem;
+    line-height: 6rem;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 990px) {
+  .home__text-wrapper h1 {
+    font-size: 6rem;
+    line-height: 8rem;
+  }
+}
+
+@keyframes typingEffectAnimation {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}

@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@200;400;500;700;800&display=swap');
+
+.Progress_container {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    /* background: linear-gradient(to bottom, white, #d1d6ee); */
+}
+
+.circle-track {
+    width: 250px;
+    height: 250px;
+    /* background: conic-gradient(from -45deg at center, #5bdafb 0%, #f3a297 15%, #f3a297 40%, #ada7e6 60%, #8285ef 80%, #5bdafb 100%); */
+    box-shadow: 0 20px 25px 0px rgba(0,0,0,0.15);
+}
+
+.circle-progress {
+    width: 250px;
+    height: 250px;
+    background:conic-gradient(from -45deg at center, rgba(255,255,255,0.5) 0%, transparent 100%);
+    animation: RotateEffectAnimation 5s infinite ease-in-out;
+}
+
+.circle-inner {
+    width: 210px;
+    height: 210px;
+    box-shadow: 0 20px 20px 0 rgba(0,0,0,0.15);
+}
+
+.pointer {
+    transform: rotate(225deg) translateX(90px);
+}
+
+.power-bg {
+    border-radius: 50px;
+    background: linear-gradient(to top right, #9bace4, #fff);
+}
+
+.app-color-black {
+    color: #0E171D;
+}
+
+.app-color-purple {
+    color: #ADAAE7;
+}
+
+.app-color-blue {
+    color: #7F80E5;
+}
+
+.app-color-red {
+    color: #E1B5C6;
+}
+
+.app-font-sm {
+    font-size: 8px;
+    font-weight: 800;
+}
+
+.app-font-md {
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.app-bg-color-black {
+    background-color: #0E171D;
+}
+
+.app-shadow {
+    box-shadow: 0 15px 25px 0px rgb(0 0 0 / 10%);
+}
+
+@keyframes RotateEffectAnimation {
+    from{ transform: rotate(-360deg); }
+    to{ transform: rotate(360deg); }
+  }
+
+  .pBox {
+    width: 200px;
+    height: 200px;
+    box-shadow: 16px 14px 20px #0000008c;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pBox::before{
+    content: "";
+    background-image: conic-gradient(
+        rgb(64, 77, 219) 20deg,
+        transparent 120deg
+        );
+    
+    width: 150%;
+    height: 150%;
+    /* border-radius: 50%; */
+    position: absolute;
+    animation: rotate 2s linear infinite;
+}
+.pBox::after{
+    content: "";
+    width: 190px;
+    height: 190px;
+    background: #101010;
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ff0052;
+    font-size: larger;
+    letter-spacing: 5px;
+    box-shadow: inset 20px 20px 20px #0000008c;
+}
+.pBox .pBox_content{
+    position: absolute;
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    
+     height: 100%;
+     z-index: 5;
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
