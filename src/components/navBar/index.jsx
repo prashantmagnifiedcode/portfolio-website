@@ -12,7 +12,7 @@ const Navbar = () => {
   };
   
   return (
-    <header class=" h-60 w-full flex items-baseline  justify-between px-32 py-8 font-medium z-10 dark:text-light lg:px-16 relative z-1 md:px-12 pl-5 pt-12  ">
+    <header class="  w-full flex items-baseline  justify-between px-32 py-8 font-medium z-10 dark:text-light lg:px-16 relative z-1 md:px-12 pl-5 pt-12  ">
       <button
         type="button"
         class=" flex-col items-center justify-center flex md:hidden"
@@ -357,7 +357,12 @@ const Navbar = () => {
                <Link 
                to="/"
                class="mr-4 lg:m-0 lg:my-2  rounded relative group text-white  text-medium text-xl my-1">
-                 Project
+                 Technical Stack
+               </Link>
+               <Link 
+               to="/contact"
+               class="mr-4 lg:m-0 lg:my-2  rounded relative group text-white  text-medium text-xl my-1">
+                 Contact
                </Link>
                <div 
                  onClick={()=> setToggleIcon(false)}

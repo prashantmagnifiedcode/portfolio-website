@@ -15,15 +15,8 @@ const Home = () => {
   return (
     <>
 
-    <div className='TopBox text-white absolute left-[50%] top-2 translate-x-[-50%] md:hidden flex  '>
-    <div className='TopBox_content'>
-    <img class=" h-20 w-20  rounded-full object-cover" src="https://avatars.githubusercontent.com/u/82441036?v=4"alt=""/>
-                             
-    </div>
-
-
-</div>
     <section id="home" className="home relative">
+   
    
 
       <div className="__text-wrapper">
